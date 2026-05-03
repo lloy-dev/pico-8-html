@@ -1,19 +1,105 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>My Website</title>
+    <title>~:fish - PICO-8 Mini Games</title>
     <meta charset="utf-8" />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="My Website" />
-    <meta
-      property="og:description"
-      content="Starter template for a static HTML website/page."
-    />
-    <link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+    <meta name="theme-color" content="#f54e56" />
+    <meta name="description" content="PICO-8 Mini Games" />
+    <meta property="og:title" content="PICO-8 Mini Games" />
+    <meta property="og:description" content="PICO-8 Mini Games" />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/pico-8-logo.png" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
-    <p>Hello World!</p>
+    <main>
+      <article class="fade">
+        <section class="terminal-line">
+          <p class="terminal-path">~</p>
+        </section>
+        <section class="terminal-line">
+          <p>
+            <span class="terminal-input">&gt;</span>
+            <span class="terminal-command">cd Carts</span>
+          </p>
+        </section>
+        <section class="terminal-command-output" />
+      </article>
+
+      <article class="fade">
+        <section class="terminal-line">
+          <p class="terminal-path">~/Carts</p>
+        </section>
+        <section class="terminal-line">
+          <p>
+            <span class="terminal-input">&gt;</span>
+            <span class="terminal-command">glow README.md</span>
+          </p>
+        </section>
+        <section class="terminal-command-output markdown-output">
+          <h2>Instructions</h2>
+          <p>
+            Select a game from the list below, then click the Play button to begin.
+          </p>
+        </section>
+      </article>
+
+      <article class="fade">
+        <section class="terminal-line">
+          <p class="terminal-path">~/Carts</p>
+        </section>
+        <section class="terminal-line">
+          <p>
+            <span class="terminal-input">&gt;</span>
+            <span class="terminal-command">ls</span>
+          </p>
+        </section>
+        <section class="terminal-command-output ls-output">
+          <ul>
+            <li>
+              <span class="ls-permissions">.r--r--r--</span> -
+              <span class="ls-user">user</span>
+              <span class="ls-datetime">29 Apr 22:57</span>
+              <span class="ls-filename">README.md</a>
+            </li>
+            <li>
+              <span class="ls-permissions">.r-xr-xr-x</span> -
+              <span class="ls-user">user</span>
+              <span class="ls-datetime">30 Mar 22:56</span>
+              <a class="ls-filename" href="carts/dragon_hop.html"
+                >Dragon Hop</a
+              >
+            </li>
+            <li>
+              <span class="ls-permissions">.r-xr-xr-x</span> -
+              <span class="ls-user">user</span>
+              <span class="ls-datetime">31 Mar 08:28</span>
+              <a class="ls-filename" href="carts/lander.html">Lander</a>
+            </li>
+            <li>
+              <span class="ls-permissions">.r-xr-xr-x</span> -
+              <span class="ls-user">user</span>
+              <span class="ls-datetime">03 Apr 03:31</span>
+              <a class="ls-filename" href="carts/simple_snakes.html"
+                >Simple Snakes</a
+              >
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <article class="fade">
+        <section class="terminal-line">
+          <p class="terminal-path">~/Carts</p>
+        </section>
+        <section class="terminal-line terminal-cursor">
+          <p>
+            <span class="terminal-input">&gt;&nbsp;</span>
+          </p>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
