@@ -1,16 +1,161 @@
-body {
+@font-face {
+  font-family: "PICO-8 Mono";
+  src: url("../assets/fonts/pico-8-mono/pico-8-mono.otf.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+p,
+h2,
+figure {
   margin: 0;
 }
 
 :root {
-  --body-bg-color: white;
-  --text-color: #ff0000;
+  --layer-bg-color: #433f3eff;
+  --text-color: #ccc;
+  --link-color: #ccc;
+  --link-hover-color: #f69;
+  --markdown-header-bg-color: #f69;
+  --markdown-header-text-color: white;
+  --ls-permissions-color: #ccc;
+  --ls-user-color: #fc3;
+  --ls-datetime-color: #7cf;
+  --ls-filename-color: #fab;
+  --terminal-path-text-color: #f7a;
+  --terminal-input-text-color: white;
 }
 
 body {
-  background-color: var(--body-bg-color);
+  background-color: var(--layer-bg-color);
+  font-family: "PICO-8 Mono", monospace;
 }
 
-p {
+main {
+  margin: 10px;
+}
+
+p,
+h2,
+li {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
   color: var(--text-color);
+  text-transform: lowercase;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.terminal-cursor {
+  border-right: 10px solid white;
+  width: fit-content;
+  animation: blink 1s steps(1) infinite;
+  animation-delay: 1.4s;
+}
+
+.terminal-path {
+  color: var(--terminal-path-text-color);
+}
+
+.terminal-input {
+  color: var(--terminal-input-text-color);
+}
+
+.terminal-command {
+  color: var(--text-color);
+}
+
+.terminal-command-output {
+  margin: 12px 0;
+}
+
+.markdown-output {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.markdown-output h2 {
+  background: var(--markdown-header-bg-color);
+  color: var(--markdown-header-text-color);
+  width: fit-content;
+  padding: 0 8px;
+}
+
+.ls-output ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ls-permissions {
+  color: var(--ls-permissions-color);
+}
+
+.ls-user {
+  color: var(--ls-user-color);
+}
+
+.ls-datetime {
+  color: var(--ls-datetime-color);
+}
+
+a.ls-filename {
+  color: var(--ls-filename-color);
+}
+
+a.ls-filename:hover {
+  color: var(--link-hover-color);
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.fade:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.fade:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+.fade:nth-child(4) {
+  animation-delay: 2.2s;
+}
+
+/* Animations */
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .fastfetch-output {
+    flex-direction: row;
+    padding: 0 28px;
+    gap: 28px;
+  }
 }
