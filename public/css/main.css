@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --body-bg-color: white;
+  --text-color: #ff0000;
+}
+
+body {
+  background-color: var(--body-bg-color);
+}
+
+p {
+  color: var(--text-color);
+}

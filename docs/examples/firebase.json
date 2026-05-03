@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "site": "firebase-site-id",
+    "public": "public"
+  }
+}

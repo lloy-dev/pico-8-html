@@ -1,0 +1,24 @@
+name: Deploy to Firebase Hosting on PR
+
+on:
+  pull_request:
+    branches:
+      - production
+
+env:
+  VITE_FIREBASE_PROJECT_ID: "${{ secrets.FIREBASE_PROJECT_ID  }}"
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy Storybook to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          channelId: preprod
+          projectId: ${{ secrets.FIREBASE_PROJECT_ID }}
+          target: ${{ secrets.FIREBASE_SITE_ID }}
