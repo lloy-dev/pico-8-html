@@ -13,10 +13,16 @@ figure {
 }
 
 :root {
+  --text-font-family: "PICO-8 Mono", monospace;
+  --text-font-size: 16px;
+  --text-line-height: 2;
+  --text-transform: lowercase;
   --layer-bg-color: #433f3eff;
   --text-color: #ccc;
   --link-color: #ccc;
   --link-hover-color: #f69;
+  --fastfetch-title-color: #f54e56;
+  --fastfetch-key-color: #f54e56;
   --markdown-header-bg-color: #f69;
   --markdown-header-text-color: white;
   --ls-permissions-color: #ccc;
@@ -25,11 +31,12 @@ figure {
   --ls-filename-color: #fab;
   --terminal-path-text-color: #f7a;
   --terminal-input-text-color: white;
+  --terminal-cursor-color: white;
 }
 
 body {
   background-color: var(--layer-bg-color);
-  font-family: "PICO-8 Mono", monospace;
+  font-family: var(--text-font-family);
 }
 
 main {
@@ -40,11 +47,11 @@ p,
 h2,
 li {
   font-style: normal;
-  font-size: 16px;
+  font-size: var(--text-font-size);
   font-weight: 400;
-  line-height: 2;
+  line-height: var(--text-line-height);
   color: var(--text-color);
-  text-transform: lowercase;
+  text-transform: var(--text-transform);
 }
 
 a {
@@ -55,11 +62,8 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-.terminal-cursor {
-  border-right: 10px solid white;
+.terminal-line {
   width: fit-content;
-  animation: blink 1s steps(1) infinite;
-  animation-delay: 1.4s;
 }
 
 .terminal-path {
@@ -78,6 +82,27 @@ a:hover {
   margin: 12px 0;
 }
 
+.fastfetch-output {
+  display: flex;
+  flex-direction: column;
+  padding: 0 28px;
+  gap: 12px;
+}
+
+.fastfetch-output .fastfetch-logo {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.fastfetch-title {
+  color: var(--fastfetch-title-color);
+}
+
+.fastfetch-key {
+  color: var(--fastfetch-key-color);
+}
+
 .markdown-output {
   display: flex;
   flex-direction: column;
@@ -88,7 +113,7 @@ a:hover {
   background: var(--markdown-header-bg-color);
   color: var(--markdown-header-text-color);
   width: fit-content;
-  padding: 0 8px;
+  padding: 0 4px;
 }
 
 .ls-output ul {
@@ -117,36 +142,82 @@ a.ls-filename:hover {
   color: var(--link-hover-color);
 }
 
-.fade {
+/* Animated Class Names */
+.terminal-cursor {
+  border-right: 10px solid var(--terminal-cursor-color);
+  width: fit-content;
+  animation: blink-cursor 0.75s step-end infinite;
+  animation-delay: 2.5s;
+}
+
+.typewriter {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3.5s steps(100, end) forwards;
+}
+
+.fade-before,
+.fade-after {
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
+  animation: fade-in 1s ease forwards;
 }
 
-.fade:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.fade:nth-child(2) {
-  animation-delay: 0.8s;
-}
-
-.fade:nth-child(3) {
-  animation-delay: 1.4s;
-}
-
-.fade:nth-child(4) {
-  animation-delay: 2.2s;
-}
-
-/* Animations */
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
+article:nth-child(1) {
+  .fade-after {
+    animation-delay: 0.5s;
   }
 }
 
-@keyframes fadeIn {
+article:nth-child(2) {
+  .fade-before {
+    animation-delay: 0.5s;
+  }
+  .typewriter {
+    animation-delay: 1s;
+  }
+  .fade-after {
+    animation-delay: 1.5s;
+  }
+}
+
+article:nth-child(3) {
+  .fade-before {
+    animation-delay: 1.5s;
+  }
+  .typewriter {
+    animation-delay: 2s;
+  }
+  .fade-after {
+    animation-delay: 2.5s;
+  }
+}
+
+article:last-child.fade-before {
+  animation-delay: 2.5s;
+}
+
+/* Animations */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--terminal-cursor-color);
+  }
+}
+
+@keyframes fade-in {
   to {
     opacity: 1;
   }

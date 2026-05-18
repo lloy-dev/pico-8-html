@@ -9,17 +9,83 @@
     <meta name="description" content="PICO-8 Mini Games" />
     <meta property="og:title" content="PICO-8 Mini Games" />
     <meta property="og:description" content="PICO-8 Mini Games" />
-
+    <meta property="og:image" content="https://cdn.lloy.dev/images/covers/pico_8_cover.webp" />
+    <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="./assets/pico-8-logo.png" />
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
   </head>
   <body>
     <main>
-      <article class="fade">
+      <!-- <article>
         <section class="terminal-line">
           <p class="terminal-path">~</p>
         </section>
+        <section class="terminal-line typewriter">
+          <p>
+            <span class="terminal-input">&gt;</span>
+            <span class="terminal-command">fastfetch</span>
+          </p>
+        </section>
+        <section class="terminal-command-output fastfetch-output fade-after">
+          <figure>
+            <img class="fastfetch-logo" src="./assets/logo.png" />
+          </figure>
+          <section>
+            <h2>
+              <span class="fastfetch-title">user</span>@<span
+                class="fastfetch-title"
+                >hostname</span
+              >
+            </h2>
+            <p>-------------</p>
+            <p>
+              <span class="fastfetch-key">Name:</span>
+              <span>First Last</span>
+            </p>
+            <p>
+              <span class="fastfetch-key">Email:</span>
+              <span>contact@mail.com</span>
+            </p>
+            <br />
+            <p>
+              <span class="fastfetch-key">Link 1:</span>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://example-1.com
+              </a>
+            </p>
+            <p>
+              <span class="fastfetch-key">Link ABC:</span>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.example-abc.com
+              </a>
+            </p>
+            <p>
+              <span class="fastfetch-key">Link 3:</span>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.example-3.com
+              </a>
+            </p>
+          </section>
+        </section>
+      </article> -->
+
+      <article>
         <section class="terminal-line">
+          <p class="terminal-path">~</p>
+        </section>
+        <section class="terminal-line typewriter">
           <p>
             <span class="terminal-input">&gt;</span>
             <span class="terminal-command">cd Carts</span>
@@ -28,69 +94,47 @@
         <section class="terminal-command-output" />
       </article>
 
-      <article class="fade">
-        <section class="terminal-line">
+      <article>
+        <section class="terminal-line fade-before">
           <p class="terminal-path">~/Carts</p>
         </section>
-        <section class="terminal-line">
+        <section class="terminal-line typewriter">
           <p>
             <span class="terminal-input">&gt;</span>
             <span class="terminal-command">glow README.md</span>
           </p>
         </section>
-        <section class="terminal-command-output markdown-output">
-          <h2>Instructions</h2>
+        <section class="terminal-command-output markdown-output fade-after">
+          <h2>How to play</h2>
           <p>
             Select a game from the list below, then click the Play button to begin.
           </p>
         </section>
       </article>
 
-      <article class="fade">
-        <section class="terminal-line">
+      <article>
+        <section class="terminal-line fade-before">
           <p class="terminal-path">~/Carts</p>
         </section>
-        <section class="terminal-line">
+        <section class="terminal-line typewriter">
           <p>
             <span class="terminal-input">&gt;</span>
             <span class="terminal-command">ls</span>
           </p>
         </section>
-        <section class="terminal-command-output ls-output">
-          <ul>
+        <section class="terminal-command-output ls-output fade-after">
+          <ul id="pico-8-cart-list">
             <li>
               <span class="ls-permissions">.r--r--r--</span> -
               <span class="ls-user">user</span>
               <span class="ls-datetime">29 Apr 22:57</span>
               <span class="ls-filename">README.md</a>
             </li>
-            <li>
-              <span class="ls-permissions">.r-xr-xr-x</span> -
-              <span class="ls-user">user</span>
-              <span class="ls-datetime">30 Mar 22:56</span>
-              <a class="ls-filename" href="carts/dragon_hop.html"
-                >Dragon Hop</a
-              >
-            </li>
-            <li>
-              <span class="ls-permissions">.r-xr-xr-x</span> -
-              <span class="ls-user">user</span>
-              <span class="ls-datetime">31 Mar 08:28</span>
-              <a class="ls-filename" href="carts/lander.html">Lander</a>
-            </li>
-            <li>
-              <span class="ls-permissions">.r-xr-xr-x</span> -
-              <span class="ls-user">user</span>
-              <span class="ls-datetime">03 Apr 03:31</span>
-              <a class="ls-filename" href="carts/simple_snakes.html"
-                >Simple Snakes</a
-              >
-            </li>
           </ul>
         </section>
       </article>
 
-      <article class="fade">
+      <article class="fade-before">
         <section class="terminal-line">
           <p class="terminal-path">~/Carts</p>
         </section>
@@ -101,5 +145,7 @@
         </section>
       </article>
     </main>
+
+    <script src="./js/pico-8-cart-list.js"></script>
   </body>
 </html>
