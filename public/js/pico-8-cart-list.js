@@ -3,17 +3,17 @@ const CARTS = [
   {
     name: "Dragon Hop",
     dateTime: "30 Mar 22:56",
-    href: "carts/dragon_hop.html",
+    href: "/carts/dragon_hop.html",
   },
   {
     name: "Lander",
     dateTime: "31 Mar 08:28",
-    href: "carts/lander.html",
+    href: "/carts/lander.html",
   },
   {
     name: "Simple Snakes",
     dateTime: "03 Apr 03:31",
-    href: "carts/simple_snakes.html",
+    href: "/carts/simple_snakes.html",
   },
 ];
 
