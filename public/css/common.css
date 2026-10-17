@@ -99,10 +99,12 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: inherit;
     }
 
     a {
       color: var(--link-color);
+      font-size: inherit;
     }
 
     a:hover {
