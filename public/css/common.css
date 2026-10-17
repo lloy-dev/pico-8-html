@@ -1,0 +1,140 @@
+:root {
+  --text-font-size: 16px;
+  --text-line-height: 2;
+  --text-transform: lowercase;
+  --text-color: #f7f2dd;
+  --link-color: #fab;
+  --link-hover-color: #f69;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--text-font-family);
+  text-transform: var(--text-transform);
+}
+
+body {
+  background-color: #15142b;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 1px
+  );
+  background-size: 100% 5px;
+  color: var(--text-color);
+}
+
+.page-nav,
+.page-header,
+.page-content,
+.page-footer {
+  padding-left: calc((100% - 1200px) / 2);
+  padding-right: calc((100% - 1200px) / 2);
+}
+
+/* || Page Nav */
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  border-bottom: 1px solid rgba(247, 242, 221, 0.16);
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+/* || Page Content */
+
+.page-content {
+  min-height: calc(100vh - (122px + 60px + 62px));
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* || Page Footer */
+
+.page-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-top: 1px solid rgba(247, 242, 221, 0.16);
+  font-size: 9px;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      color: var(--link-color);
+    }
+
+    a:hover {
+      color: var(--link-hover-color);
+    }
+  }
+
+  .divider-bullet {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+  }
+}
+
+/* || md and lg devices or tablets */
+@media (min-width: 768px) and (max-width: 1023px),
+  (min-width: 1024px) and (max-width: 1279px) {
+  .page-nav,
+  .page-header,
+  .page-content,
+  .page-footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/* || xs and sm devices or phones */
+@media (max-width: 479px), (min-width: 480px) and (max-width: 767px) {
+  .page-nav,
+  .page-header,
+  .page-content,
+  .page-footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

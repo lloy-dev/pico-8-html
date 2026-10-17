@@ -7,22 +7,4 @@
 
 :root {
   --text-font-family: "PICO-8 Mono", monospace;
-  --text-font-size: 16px;
-  --text-line-height: 2;
-  --text-transform: lowercase;
-  --layer-bg-color: #433f3eff;
-  --text-color: #ccc;
-  --link-color: #ccc;
-  --link-hover-color: #f69;
-  --fastfetch-title-color: #f54e56;
-  --fastfetch-key-color: #f54e56;
-  --markdown-header-bg-color: #f69;
-  --markdown-header-text-color: white;
-  --ls-permissions-color: #ccc;
-  --ls-user-color: #fc3;
-  --ls-datetime-color: #7cf;
-  --ls-filename-color: #fab;
-  --terminal-path-text-color: #f7a;
-  --terminal-input-text-color: white;
-  --terminal-cursor-color: white;
 }

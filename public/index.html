@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PICO-8 Games</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f54e56" />
+    <meta name="description" content="PICO-8 Games" />
+    <meta property="og:title" content="PICO-8 Games" />
+    <meta property="og:description" content="PICO-8 Games" />
+    <meta
+      property="og:image"
+      content="https://cdn.lloy.dev/images/covers/pico_8_cover.webp"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./assets/pico-8-logo.png" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/play-area.css" />
+  </head>
+  <body>
+    <nav class="page-nav">
+      <div class="nav-brand">
+        <img src="./assets/lloydev-pixel-logo.png" />
+        <p>lloydev games</p>
+      </div>
+    </nav>
+    <main class="page-content">
+      <section class="play-area">
+        <figure class="console">
+          <div class="bezel">
+            <div class="screen">
+              <iframe
+                id="console_iframe"
+                src="https://pico8.lloy.dev/carts/simple_snakes.html"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="brand">
+              <img src="./assets/pico-8-logo.png" />
+              <p>pico-8</p>
+            </div>
+          </div>
+        </figure>
+        <div class="cart-list">
+          <button onclick="onClickCart('dragon_hop')">
+            <img
+              src="https://cdn.lloy.dev/images/gallery/pico_8/dragon_hop.p8.png"
+            />
+          </button>
+          <button onclick="onClickCart('lander')">
+            <img
+              src="https://cdn.lloy.dev/images/gallery/pico_8/lander.p8.png"
+            />
+          </button>
+          <button onclick="onClickCart('simple_snakes')">
+            <img
+              src="https://cdn.lloy.dev/images/gallery/pico_8/simple_snakes.p8.png"
+            />
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <ul>
+        <li>
+          <a
+            href="https://www.lexaloffle.com/bbs/?uid=145116"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Lexaloffle</a
+          >
+        </li>
+        <span class="divider-bullet">•</span>
+        <li>
+          <a
+            href="https://lloy-dev.itch.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >itch.io</a
+          >
+        </li>
+        <span class="divider-bullet">•</span>
+        <li>
+          <a
+            href="https://gitlab.com/lloydev-games"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitLab</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
