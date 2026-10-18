@@ -92,6 +92,12 @@ body {
     padding-right: 15px;
     padding-left: 15px;
   }
+
+  .page-content {
+    min-height: calc(100vh - (30px + 62px));
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
 }
 
 /* || xs and sm devices or phones */
@@ -102,5 +108,11 @@ body {
   .page-footer {
     padding-right: 15px;
     padding-left: 15px;
+  }
+
+  .page-content {
+    min-height: calc(100vh - (30px + 62px));
+    padding-top: 0;
+    padding-bottom: 30px;
   }
 }
