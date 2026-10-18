@@ -6,31 +6,18 @@
   .console {
     margin: 0;
     padding: 0;
-    position: relative;
-    width: 585px;
-    height: 640px;
-    background-color: #e3decd;
+    width: 500px;
+    height: 500px;
+    background-color: #49333c;
     border: 1px solid #a9a390;
     border-radius: 24px;
   }
 
-  .bezel {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    bottom: 70px;
-    left: 50px;
-    background-color: #39364d; /* #222033 */
-    border-radius: 10px;
-  }
-
   .screen {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    bottom: 50px;
-    left: 15px;
-    background-color: #222033;
+    padding: 30px 5px 0;
+    aspect-ratio: 207 / 171;
+    flex-shrink: 0;
+    align-self: flex-start;
     border-radius: 5px;
   }
 
@@ -38,19 +25,15 @@
     height: 100%;
     width: 100%;
     border: none;
-    border-radius: 5px;
+    background-color: transparent;
   }
 
   .brand {
-    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    left: 0;
-    bottom: 0;
-    right: 0;
 
     img {
       height: 30px;
@@ -61,8 +44,8 @@
 
 .cart-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   gap: 20px;
 
   button {
@@ -85,27 +68,13 @@
 
     .console {
       width: 100%;
-      height: 40vh;
+      height: initial;
     }
 
-    .bezel {
-      top: 20px;
-      right: 20px;
-      bottom: 20px;
-      left: 20px;
+    .brand {
+      margin-top: -30px;
+      margin-bottom: 10px;
     }
-
-    .screen {
-      top: 15px;
-      right: 15px;
-      bottom: 50px;
-      left: 15px;
-    }
-  }
-
-  .cart-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
   }
 }
 
@@ -117,26 +86,12 @@
 
     .console {
       width: 100%;
-      height: 40vh;
+      height: initial;
     }
 
-    .bezel {
-      top: 20px;
-      right: 20px;
-      bottom: 20px;
-      left: 20px;
+    .brand {
+      margin-top: -30px;
+      margin-bottom: 10px;
     }
-
-    .screen {
-      top: 15px;
-      right: 15px;
-      bottom: 50px;
-      left: 15px;
-    }
-  }
-
-  .cart-list {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
   }
 }
