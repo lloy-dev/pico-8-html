@@ -25,6 +25,8 @@
       <sub><em>Simple Snakes</em></sub>
     </td>
     <td align="center">
+      <img src="./docs/images/platformer_demo_preview.gif" width="100%"/><br>
+      <sub><em>Platformer Demo (WIP)</em></sub>
     </td>
   </tr>
 </table>

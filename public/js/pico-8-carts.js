@@ -5,11 +5,16 @@ const carts = {
   },
   lander: {
     label: "Lander",
-    description: `Press up to slow down or ascend.\nPress left or right to steer.`,
+    description:
+      "Press up to slow down or ascend.\nPress left or right to steer.",
   },
   simple_snakes: {
     label: "Simple Snakes",
     description: "Press the directional buttons to move.",
+  },
+  platformer_demo: {
+    label: "Platformer Demo (WIP)",
+    description: "Still in progress.",
   },
 };
 
