@@ -25,8 +25,8 @@
       <sub><em>Simple Snakes</em></sub>
     </td>
     <td align="center">
-      <img src="./docs/images/platformer_demo_preview.gif" width="100%"/><br>
-      <sub><em>Platformer Demo (WIP)</em></sub>
+      <img src="./docs/images/the_dragon_and_the_wing_preview.gif" width="100%"/><br>
+      <sub><em>The Dragon & The Wing</em></sub>
     </td>
   </tr>
 </table>

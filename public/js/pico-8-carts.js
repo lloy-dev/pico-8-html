@@ -12,8 +12,8 @@ const carts = {
     label: "Simple Snakes",
     description: "Press the directional buttons to move.",
   },
-  platformer_demo: {
-    label: "Platformer Demo (WIP)",
+  the_dragon_and_the_wing: {
+    label: "The Dragon & The Wing",
     description: "Still in progress.",
   },
 };
