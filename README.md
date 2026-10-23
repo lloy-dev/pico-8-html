@@ -25,8 +25,8 @@
       <sub><em>Simple Snakes</em></sub>
     </td>
     <td align="center">
-      <img src="./docs/images/the_dragon_and_the_wing_preview.gif" width="100%"/><br>
-      <sub><em>The Dragon & The Wing</em></sub>
+      <img src="./docs/images/the_dragon_and_the_exceed_preview.gif" width="100%"/><br>
+      <sub><em>The Dragon & The Exceed</em></sub>
     </td>
   </tr>
 </table>

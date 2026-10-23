@@ -12,8 +12,8 @@ const carts = {
     label: "Simple Snakes",
     description: "Press the directional buttons to move.",
   },
-  the_dragon_and_the_wing: {
-    label: "The Dragon & The Wing",
+  the_dragon_and_the_exceed: {
+    label: "The Dragon & The Exceed",
     description: "Still in progress.",
   },
 };
