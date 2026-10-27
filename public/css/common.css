@@ -40,6 +40,9 @@ body {
   min-height: calc(100vh - (100px + 62px));
   padding-top: 70px;
   padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* || Page Footer */
@@ -114,5 +117,19 @@ body {
     min-height: calc(100vh - (30px + 62px));
     padding-top: 0;
     padding-bottom: 30px;
+  }
+
+  .page-footer {
+    height: initial;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    ul {
+      flex-direction: column;
+    }
+
+    .divider-bullet {
+      display: none;
+    }
   }
 }
