@@ -69,8 +69,13 @@
 }
 
 .cart-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   .title {
     text-align: center;
+    margin: 16px 0;
   }
 
   .cart-list {
